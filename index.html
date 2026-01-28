@@ -1,95 +1,103 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Além do Leite | Guia do Desmame Consciente</title>
+ <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
-    body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: #fff7f4;
-      color: #5a3a2e;
-      line-height: 1.6;
-    }
+   body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #fff9f7;
+  color: #5a3a2e;
+  line-height: 1.8;
+  font-size: 16px;
+}
 
-    header {
-      background: #f6d6d0;
-      padding: 60px 20px;
-      text-align: center;
-    }
+/* TÍTULOS */
+h1, h2, h3 {
+  font-family: 'Playfair Display', serif;
+  color: #6b3f2c;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-    }
+/* HERO (primeira dobra) */
+header {
+  background: linear-gradient(180deg, #f6d6d0 0%, #fff9f7 100%);
+  padding: 60px 20px;
+  text-align: center;
+}
 
-    header p {
-      max-width: 700px;
-      margin: 0 auto 30px;
-      font-size: 1.1rem;
-    }
+header h1 {
+  font-size: 2.6rem;
+  margin-bottom: 15px;
+}
 
-    .btn {
-      display: inline-block;
-      background: #8b5e3c;
-      color: #fff;
-      padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+header p {
+  font-size: 1.15rem;
+  max-width: 650px;
+  margin: 0 auto 30px;
+}
 
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
+/* BOTÃO DE CONVERSÃO */
+.btn {
+  display: inline-block;
+  background: #8b5e3c;
+  color: #ffffff;
+  padding: 16px 32px;
+  border-radius: 40px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 8px 20px rgba(139, 94, 60, 0.25);
+  transition: all 0.3s ease;
+}
 
-    section h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
+.btn:hover {
+  background: #734a30;
+  transform: translateY(-2px);
+}
 
-    .benefits ul {
-      list-style: none;
-      padding: 0;
-    }
+/* SEÇÕES */
+section {
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: auto;
+}
 
-    .benefits li {
-      margin-bottom: 15px;
-    }
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
 
-    .testimonial {
-      background: #fff;
-      padding: 25px;
-      border-radius: 15px;
-      margin-bottom: 20px;
-    }
+/* DEPOIMENTOS */
+blockquote {
+  background: #fdf0ec;
+  border-left: 4px solid #d9a28f;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 12px;
+  font-style: italic;
+}
 
-    .price-box {
-      background: #f6d6d0;
-      padding: 40px;
-      border-radius: 20px;
-      text-align: center;
-    }
+/* PREÇO */
+.price {
+  font-size: 2.2rem;
+  font-weight: 600;
+  color: #8b5e3c;
+}
 
-    .old-price {
-      text-decoration: line-through;
-      color: #999;
-    }
+.old-price {
+  text-decoration: line-through;
+  color: #bfa9a0;
+  font-size: 1.2rem;
+}
 
-    footer {
-      text-align: center;
-      font-size: 0.85rem;
-      padding: 30px 15px;
-      color: #7a5a4a;
-    }
-
-    .faq p {
-      margin-bottom: 20px;
-    }
+/* RODAPÉ */
+footer {
+  background: #f6d6d0;
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 0.9rem;
+}
   </style>
 </head>
 <body>
@@ -190,3 +198,5 @@
 
 </body>
 </html>
+<p class="old-price">De R$ 147,00</p>
+<p class="price">R$ 37,00</p>
