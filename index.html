@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+ <meta charset="UTF-8">
  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
@@ -19,7 +20,7 @@ h1, h2, h3 {
   color: #6b3f2c;
 }
 
-/* HERO (primeira dobra) */
+/* HERO */
 header {
   background: linear-gradient(180deg, #f6d6d0 0%, #fff9f7 100%);
   padding: 60px 20px;
@@ -37,7 +38,7 @@ header p {
   margin: 0 auto 30px;
 }
 
-/* BOTÃO DE CONVERSÃO */
+/* BOTÃO */
 .btn {
   display: inline-block;
   background: #8b5e3c;
@@ -68,8 +69,18 @@ section h2 {
   margin-bottom: 20px;
 }
 
+/* LISTA */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+}
+
 /* DEPOIMENTOS */
-blockquote {
+.testimonial {
   background: #fdf0ec;
   border-left: 4px solid #d9a28f;
   padding: 25px;
@@ -79,10 +90,8 @@ blockquote {
 }
 
 /* PREÇO */
-.price {
-  font-size: 2.2rem;
-  font-weight: 600;
-  color: #8b5e3c;
+.price-box {
+  text-align: center;
 }
 
 .old-price {
@@ -91,7 +100,6 @@ blockquote {
   font-size: 1.2rem;
 }
 
-/* RODAPÉ */
 footer {
   background: #f6d6d0;
   text-align: center;
@@ -100,6 +108,7 @@ footer {
 }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -108,7 +117,11 @@ footer {
     Você sente que chegou a hora de desmamar, mas a culpa não te deixa seguir?
     Descubra como encerrar esse ciclo com amor, segurança e sem traumas para você e seu bebê.
   </p>
-  <a href="#oferta" class="btn">QUERO O MEU ACESSO AGORA</a>
+
+  <a href="https://pay.hotmart.com/E102479844P" target="_blank" class="btn">
+    QUERO O MEU ACESSO AGORA
+  </a>
+
   <p><small>Acesso imediato e seguro</small></p>
 </header>
 
@@ -123,12 +136,13 @@ footer {
   <p>
     Entre julgamentos e pressões externas, como ouvir a sua própria voz?
   </p>
-  <blockquote>
+
+  <blockquote style="background:#fdf0ec; border-left:4px solid #d9a28f; padding:25px; border-radius:12px;">
     “O desmame não precisa ser um corte bruto. Existe um caminho de transição.”
   </blockquote>
 </section>
 
-<section class="benefits">
+<section>
   <h2>Além do Leite – O Guia do Desmame Consciente</h2>
   <p><strong>DIGITAL (EBOOK)</strong></p>
   <ul>
@@ -143,28 +157,22 @@ footer {
   <h2>O que as mães dizem</h2>
 
   <div class="testimonial">
-    <p>
-      “Eu estava exausta e chorava toda vez que meu filho pedia peito. Entendi que desmamar não era deixar de amar.”
-    </p>
-    <strong>— Mariana S., mãe do Leo (2 anos)</strong>
+    “Eu estava exausta e chorava toda vez que meu filho pedia peito. Entendi que desmamar não era deixar de amar.”
+    <br><strong>— Mariana S., mãe do Leo (2 anos)</strong>
   </div>
 
   <div class="testimonial">
-    <p>
-      “Foi um processo de 3 semanas lindo e sem choros desesperados.”
-    </p>
-    <strong>— Carla F., mãe da Bia (18 meses)</strong>
+    “Foi um processo de 3 semanas lindo e sem choros desesperados.”
+    <br><strong>— Carla F., mãe da Bia (18 meses)</strong>
   </div>
 
   <div class="testimonial">
-    <p>
-      “O capítulo sobre desmame noturno foi um divisor de águas.”
-    </p>
-    <strong>— Juliana M., mãe do Théo (2 anos e meio)</strong>
+    “O capítulo sobre desmame noturno foi um divisor de águas.”
+    <br><strong>— Juliana M., mãe do Théo (2 anos e meio)</strong>
   </div>
 </section>
 
-<section id="oferta">
+<section>
   <div class="price-box">
     <h2>Oferta de Lançamento</h2>
     <p class="old-price">De R$ 147,00</p>
@@ -177,12 +185,15 @@ footer {
       ✅ Garantia incondicional de 7 dias
     </p>
 
-    <a href="#" class="btn">Quero garantir meu desconto</a>
+    <a href="https://pay.hotmart.com/E102479844P" target="_blank" class="btn">
+      Quero garantir meu desconto
+    </a>
+
     <p><small>Visa • Mastercard • Pix</small></p>
   </div>
 </section>
 
-<section class="faq">
+<section>
   <h2>Dúvidas Frequentes</h2>
   <p><strong>Para qual idade o ebook é indicado?</strong><br>O guia respeita o ritmo individual de cada bebê.</p>
   <p><strong>O desmame é imediato?</strong><br>Não. O foco é uma transição gradual e respeitosa.</p>
@@ -190,7 +201,7 @@ footer {
 </section>
 
 <footer>
-  <p>© 2024 Além do Leite. Todos os direitos reservados.</p>
+  <p>©️ 2024 Além do Leite. Todos os direitos reservados.</p>
   <p>
     Aviso: Este conteúdo não substitui a consulta com profissionais de saúde.
   </p>
