@@ -22,7 +22,6 @@ section{
   padding:90px 20px;
   max-width:1000px;
   margin:auto;
-  position:relative;
 }
 
 h1,h2,h3{
@@ -37,7 +36,7 @@ h1{
 }
 
 h2{
-  font-size:36px;
+  font-size:34px;
   text-align:center;
 }
 
@@ -47,7 +46,7 @@ p{
   margin-bottom:18px;
 }
 
-/* ===== HERO COM PARALLAX ===== */
+/* ===== HERO ===== */
 .hero{
   background:url('images/foto.antony.jpg') center/cover fixed;
   padding:160px 20px;
@@ -60,7 +59,7 @@ p{
   content:"";
   position:absolute;
   inset:0;
-  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+  background:rgba(0,0,0,0.35);
 }
 
 .hero-content{
@@ -68,12 +67,12 @@ p{
   z-index:2;
 }
 
-.hero h1{
-  font-size:52px;
-  text-shadow:2px 2px 15px rgba(0,0,0,0.5);
+.marker{
+  background:none; /* removido fundo */
+  font-weight:700;
 }
 
-/* ===== BOTÕES PREMIUM ===== */
+/* ===== BOTÕES ===== */
 .btn{
   display:inline-block;
   background:linear-gradient(90deg,#ff6f61,#ff3f1f);
@@ -85,47 +84,85 @@ p{
   text-decoration:none;
   box-shadow:0 10px 30px rgba(255,80,60,0.4);
   transition:all .3s ease;
-  animation:glow 2s infinite;
 }
 
 .btn:hover{
-  transform:translateY(-4px) scale(1.03);
+  transform:translateY(-4px);
   box-shadow:0 15px 40px rgba(255,80,60,0.6);
 }
 
-@keyframes glow{
-  0%{box-shadow:0 0 0 rgba(255,80,60,0.4);}
-  50%{box-shadow:0 0 25px rgba(255,80,60,0.6);}
-  100%{box-shadow:0 0 0 rgba(255,80,60,0.4);}
-}
-
-/* ===== MARCA TEXTO ===== */
-.marker{
-  background:linear-gradient(120deg,#ffd9d4 0%,#ffd9d4 100%);
-  padding:5px 10px;
-  border-radius:6px;
-}
-
-/* ===== DECIDIR GIGANTE ===== */
+/* ===== DECIDIR ===== */
 .highlight-decision{
-  font-size:38px;
+  font-size:36px;
   font-weight:800;
   color:#ff3f1f;
 }
 
-/* ===== PRICE SECTION MODERNA ===== */
+/* ===== BENEFÍCIOS ===== */
+.benefits{
+  background:#fff3ef;
+  border-radius:25px;
+  padding:60px 40px;
+  box-shadow:0 15px 40px rgba(0,0,0,0.08);
+}
+
+.benefits ul{
+  list-style:none;
+  padding:0;
+}
+
+.benefits li{
+  margin-bottom:18px;
+  font-size:20px;
+  position:relative;
+  padding-left:35px;
+}
+
+.benefits li::before{
+  content:"✔";
+  position:absolute;
+  left:0;
+  color:#ff3f1f;
+  font-weight:700;
+}
+
+/* ===== DEPOIMENTOS ===== */
+.testimonials{
+  text-align:center;
+}
+
+.testimonial-container{
+  position:relative;
+  height:140px;
+  overflow:hidden;
+  margin-top:40px;
+}
+
+.testimonial{
+  position:absolute;
+  width:100%;
+  opacity:0;
+  transition:opacity .8s ease;
+  font-size:19px;
+}
+
+.testimonial.active{
+  opacity:1;
+}
+
+/* ===== PRICE ===== */
 .price-section{
   background:linear-gradient(180deg,#ffe8e4,#fffaf8);
   text-align:center;
   border-radius:30px;
+  padding:80px 20px;
   box-shadow:0 20px 50px rgba(255,100,80,0.2);
 }
 
 .price{
-  font-size:64px;
+  font-size:60px;
   color:#ff3f1f;
   font-weight:800;
-  animation:fadeUp 1s ease forwards;
 }
 
 .old{
@@ -134,15 +171,10 @@ p{
   font-size:22px;
 }
 
-@keyframes fadeUp{
-  from{opacity:0;transform:translateY(30px);}
-  to{opacity:1;transform:translateY(0);}
-}
-
 /* ===== SCROLL REVEAL ===== */
 .reveal{
   opacity:0;
-  transform:translateY(50px);
+  transform:translateY(40px);
   transition:all 1s ease;
 }
 
@@ -151,12 +183,11 @@ p{
   transform:translateY(0);
 }
 
-/* ===== MOBILE ===== */
 @media(max-width:768px){
-  h1{font-size:36px;}
-  h2{font-size:28px;}
+  h1{font-size:34px;}
+  h2{font-size:26px;}
   p{font-size:20px;}
-  .price{font-size:48px;}
+  .price{font-size:46px;}
   .hero{background-attachment:scroll;}
 }
 
@@ -177,11 +208,31 @@ p{
 <!-- HISTÓRIA -->
 <section>
   <h2 class="reveal">Este E-book é para você</h2>
-  <p class="reveal">Sou Cárita, mãe do Antony.</p>
   <p class="reveal">A parte mais difícil não foi o desmame… foi <span class="highlight-decision">DECIDIR</span> desmamá-lo.</p>
   <p class="reveal">O medo de perder o vínculo era real.</p>
   <p class="reveal">Mas descobri que o vínculo não está no peito. Está na presença.</p>
-  <a href="https://pay.hotmart.com/E102479844P" class="btn reveal">Quero meu E-book</a>
+</section>
+
+<!-- BENEFÍCIOS -->
+<section class="benefits reveal">
+  <h2>O que você vai aprender</h2>
+  <ul>
+    <li>Como saber se você e seu bebê estão prontos</li>
+    <li>Estratégias para reduzir mamadas gradualmente</li>
+    <li>Como lidar com o desmame noturno</li>
+    <li>Como manter o vínculo emocional forte</li>
+    <li>Como evitar traumas e culpa</li>
+  </ul>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="testimonials reveal">
+  <h2>O que outras mães estão dizendo</h2>
+  <div class="testimonial-container">
+    <div class="testimonial active">“Foi um processo leve e respeitoso. Me senti segura.” — Mariana</div>
+    <div class="testimonial">“O capítulo sobre desmame noturno salvou minhas noites.” — Carla</div>
+    <div class="testimonial">“Não perdi o vínculo. Só amadurecemos.” — Juliana</div>
+  </div>
 </section>
 
 <!-- OFERTA -->
@@ -206,6 +257,15 @@ window.addEventListener('scroll',()=>{
     }
   });
 });
+
+// Depoimentos rotativos
+const testimonials = document.querySelectorAll('.testimonial');
+let index = 0;
+setInterval(()=>{
+  testimonials[index].classList.remove('active');
+  index = (index+1) % testimonials.length;
+  testimonials[index].classList.add('active');
+},4000);
 
 </script>
 
