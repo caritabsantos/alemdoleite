@@ -1,267 +1,213 @@
 <!doctype html>
 <html lang="pt-BR">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Além do Leite - Como Saber a Hora Certa de Desmamar</title>
-    <meta name="description" content="E-book completo para ajudar mães a desmamar seus filhos com amor e segurança. Aprenda o momento certo sem culpa e com estratégias práticas." />
-    <meta name="author" content="Cárita Bernado" />
-    <meta name="keywords" content="desmame, maternidade, bebê, e-book, amamentação" />
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Além do Leite - Como Saber a Hora Certa de Desmamar</title>
 
-    <!-- Open Graph / Social Share -->
-    <meta property="og:title" content="Além do Leite - Como Saber a Hora Certa de Desmamar" />
-    <meta property="og:description" content="E-book completo para ajudar mães a desmamar seus filhos com amor e segurança." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="images/foto.antony.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:image" content="images/foto.antony.jpg" />
+<style>
 
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+/* ===== GLOBAL ===== */
+body{
+  margin:0;
+  font-family:'Montserrat',sans-serif;
+  background:#fffaf8;
+  color:#5a3a2e;
+  scroll-behavior:smooth;
+}
 
-    <!-- Estilos principais adaptados do modelo -->
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Montserrat', sans-serif;
-        background: #fff9f7;
-        color: #5a3a2e;
-        line-height: 1.8;
-        font-size: 18px;
-      }
-      h1,h2,h3 { font-family: 'Playfair Display', serif; color: #6b3f2c; }
-      h1{ font-size:36px;text-align:center;margin-bottom:20px; }
-      h2{ font-size:28px;text-align:center;margin-bottom:16px; }
-      h3{ font-size:22px;margin-bottom:12px; }
+section{
+  padding:90px 20px;
+  max-width:1000px;
+  margin:auto;
+  position:relative;
+}
 
-      header{ background:linear-gradient(180deg,#f6d6d0 0%,#fff9f7 100%); padding:60px 20px;text-align:center; }
-      header p{ font-size:1.25rem; max-width:650px; margin:0 auto 30px; }
+h1,h2,h3{
+  font-family:'Playfair Display',serif;
+  margin-bottom:20px;
+}
 
-      .btn{
-        display:inline-block;
-        background:#ff6f61;
-        color:#fff;
-        padding:18px 36px;
-        border-radius:50px;
-        text-decoration:none;
-        font-size:1.3rem;
-        font-weight:600;
-        box-shadow:0 10px 30px rgba(255,111,97,0.35);
-        transition:all 0.3s ease;
-        position:relative;
-      }
-      .btn::after{
-        content:'➡';
-        position:absolute;
-        right:20px;
-        font-size:1.3rem;
-        transition:right 0.3s;
-      }
-      .btn:hover::after{ right:10px; }
-      .btn:hover{ background:#e65b50; transform:translateY(-3px); }
+h1{
+  font-size:48px;
+  text-align:center;
+  line-height:1.2;
+}
 
-      .fixed-cta {
-        display:none;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        background:#ff6f61;
-        color:#fff;
-        text-align:center;
-        padding:15px 0;
-        z-index:9999;
-        box-shadow:0 -5px 15px rgba(0,0,0,0.2);
-      }
-      .fixed-cta a{
-        color:#fff;
-        font-size:1.25rem;
-        font-weight:600;
-        text-decoration:none;
-      }
+h2{
+  font-size:36px;
+  text-align:center;
+}
 
-      section{ padding:60px 20px; max-width:900px; margin:auto; }
-      p,li{ font-size:18px;margin-bottom:16px; }
-      ul{ list-style:none;padding:0; }
-      ul li{ margin-bottom:10px; }
+p{
+  font-size:20px;
+  line-height:1.8;
+  margin-bottom:18px;
+}
 
-      .testimonials-container{
-        position: relative;
-        overflow:hidden;
-        height:140px;
-      }
-      .testimonial-slide{
-        position:absolute;
-        top:0;
-        left:100%;
-        width:100%;
-        opacity:0;
-        transition: all 0.6s ease;
-      }
-      .testimonial-slide.active{
-        left:0;
-        opacity:1;
-      }
+/* ===== HERO COM PARALLAX ===== */
+.hero{
+  background:url('images/foto.antony.jpg') center/cover fixed;
+  padding:160px 20px;
+  text-align:center;
+  color:white;
+  position:relative;
+}
 
-      .price-box{
-        text-align:center;
-        background:#ffe7e1;
-        border-radius:20px;
-        padding:50px 20px;
-        margin:50px auto;
-        box-shadow:0 10px 35px rgba(255,111,97,0.25);
-        position:relative;
-      }
-      .price-box::before{
-        content:'🔥 Oferta por tempo limitado!';
-        position:absolute;
-        top:-25px;
-        left:50%;
-        transform:translateX(-50%);
-        background:#ff6f61;
-        color:white;
-        padding:5px 12px;
-        font-size:0.9rem;
-        border-radius:20px;
-        font-weight:600;
-        box-shadow:0 4px 10px rgba(0,0,0,0.15);
-      }
-      .old-price{text-decoration:line-through;color:#bfa9a0;font-size:1.5rem;}
-      .price-box h1{ font-size:48px; color:#ff3f1f; margin:10px 0; }
-      .price-box p{ font-size:20px; margin-bottom:16px; }
+.hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));
+}
 
-      .countdown{
-        display:flex;
-        justify-content:center;
-        gap:15px;
-        margin-top:15px;
-        font-size:18px;
-        font-weight:600;
-        color:#ff3f1f;
-      }
-      .countdown span{ background:#fff; padding:8px 12px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
+.hero-content{
+  position:relative;
+  z-index:2;
+}
 
-      footer{ background:#f6d6d0; text-align:center; padding:30px 15px; font-size:1rem; }
+.hero h1{
+  font-size:52px;
+  text-shadow:2px 2px 15px rgba(0,0,0,0.5);
+}
 
-      .emotional-section{ background:#fff5f0; padding:50px 20px; border-radius:12px; margin:40px auto; max-width:900px; }
-      .emotional-container{ display:flex; flex-direction:column; align-items:center; gap:30px; }
-      .emotional-image img{ max-width:100%; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
-      .emotional-text{text-align:center;}
+/* ===== BOTÕES PREMIUM ===== */
+.btn{
+  display:inline-block;
+  background:linear-gradient(90deg,#ff6f61,#ff3f1f);
+  padding:18px 38px;
+  color:white;
+  border-radius:60px;
+  font-size:22px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 10px 30px rgba(255,80,60,0.4);
+  transition:all .3s ease;
+  animation:glow 2s infinite;
+}
 
-      .fade-paragraph{ opacity:0; transform:translateY(20px); animation:fadeIn 0.8s forwards; }
-      @keyframes fadeIn{ to{opacity:1; transform:translateY(0);} }
+.btn:hover{
+  transform:translateY(-4px) scale(1.03);
+  box-shadow:0 15px 40px rgba(255,80,60,0.6);
+}
 
-      @media(max-width:768px){
-        body{ font-size:20px; line-height:1.8; }
-        h1{ font-size:28px; }
-        h2{ font-size:24px; }
-        h3{ font-size:20px; }
-        p,li{ font-size:20px; }
-        .btn{ font-size:20px; padding:16px 28px; }
-        section{ padding:30px 15px; }
-        .price-box h1{ font-size:36px; }
-        .fixed-cta{ display:block; }
-      }
-    </style>
-  </head>
+@keyframes glow{
+  0%{box-shadow:0 0 0 rgba(255,80,60,0.4);}
+  50%{box-shadow:0 0 25px rgba(255,80,60,0.6);}
+  100%{box-shadow:0 0 0 rgba(255,80,60,0.4);}
+}
 
-  <body>
-    <header>
-      <h1>Para mães que buscam equilíbrio</h1>
-      <p>Você sente que chegou a hora de desmamar, mas a culpa não te deixa seguir? Descubra como encerrar esse ciclo com amor, segurança e sem traumas para você e seu bebê.</p>
-      <a href="https://pay.hotmart.com/E102479844P" target="_blank" class="btn">QUERO O MEU ACESSO AGORA</a>
-      <p><small>Acesso imediato e seguro</small></p>
-    </header>
+/* ===== MARCA TEXTO ===== */
+.marker{
+  background:linear-gradient(120deg,#ffd9d4 0%,#ffd9d4 100%);
+  padding:5px 10px;
+  border-radius:6px;
+}
 
-    <section class="emotional-section">
-      <div class="emotional-container">
-        <div class="emotional-image fade-paragraph" style="animation-delay:0.3s;"><img src="images/foto.antony.jpg" alt="Cárita com Antony"></div>
-        <div class="emotional-image fade-paragraph" style="margin-top:20px; animation-delay:0.6s;"><img src="images/foto.antony2.jpg" alt="Cárita com Antony"></div>
-        <div class="emotional-text">
-          <h2 class="fade-paragraph" style="animation-delay:0.9s;">Um momento difícil, mas necessário</h2>
-          <p class="fade-paragraph" style="animation-delay:1.1s;">Olá, sou <strong>Cárita</strong>, mamãe do <strong>Antony</strong>.</p>
-          <p class="fade-paragraph" style="animation-delay:1.3s;">Amamentei meu filho até <strong>1 ano e 5 meses</strong>, e cada momento foi <strong>puro amor</strong> 💛</p>
-          <p class="fade-paragraph" style="animation-delay:1.5s;">Mas chegou um dia em que o cansaço físico e emocional falou mais alto. Eu não dormia direito e sabia que precisava decidir: <strong>continuar amamentando ou desmamar</strong>.</p>
-          <p class="fade-paragraph" style="animation-delay:1.7s;">A parte mais difícil não foi o desmame… <br>foi <strong>decidir desmamá-lo</strong>. O medo de perder o vínculo era real.</p>
-          <h3 class="fade-paragraph" style="animation-delay:1.9s;">Este E-book é para você</h3>
-          <p class="fade-paragraph" style="animation-delay:2.1s;">Se você está pensando em desmamar, <strong>esse é o começo do seu processo</strong>. Meu E-book vai te mostrar <strong>como saber se você e seu bebê estão prontos</strong>, sem culpa, com amor e segurança.</p>
-          <p class="fade-paragraph" style="animation-delay:2.3s;">💌 <strong>Você não está sozinha!</strong></p>
-          <a href="https://pay.hotmart.com/E102479844P" target="_blank" class="btn fade-paragraph" style="animation-delay:2.5s;">Quero meu E-book</a>
-        </div>
-      </div>
-    </section>
+/* ===== DECIDIR GIGANTE ===== */
+.highlight-decision{
+  font-size:38px;
+  font-weight:800;
+  color:#ff3f1f;
+}
 
-    <section>
-      <h2>Eu sei exatamente o que você está sentindo…</h2>
-      <p>O cansaço que parece não ter fim. As noites em claro. A sensação de que o seu corpo já não te pertence.</p>
-      <p>Você ama seu filho profundamente, mas sente vontade de retomar sua autonomia — e a culpa aparece.</p>
-      <p>Entre julgamentos e pressões externas, como ouvir a sua própria voz?</p>
+/* ===== PRICE SECTION MODERNA ===== */
+.price-section{
+  background:linear-gradient(180deg,#ffe8e4,#fffaf8);
+  text-align:center;
+  border-radius:30px;
+  box-shadow:0 20px 50px rgba(255,100,80,0.2);
+}
 
-      <div class="testimonials-container">
-        <div class="testimonial-slide active">“O desmame não precisa ser um corte bruto. Existe um caminho de transição.” — Mariana S., mãe do Leo (2 anos)</div>
-        <div class="testimonial-slide">“Foi um processo de 3 semanas lindo e sem choros desesperados.” — Carla F., mãe da Bia (18 meses)</div>
-        <div class="testimonial-slide">“O capítulo sobre desmame noturno foi um divisor de águas.” — Juliana M., mãe do Théo (2 anos e meio)</div>
-      </div>
-    </section>
+.price{
+  font-size:64px;
+  color:#ff3f1f;
+  font-weight:800;
+  animation:fadeUp 1s ease forwards;
+}
 
-    <section class="price-box">
-      <h2>Oferta de Lançamento</h2>
-      <p class="old-price">De R$ 147,00</p>
-      <h1>R$ 37,00</h1>
-      <p>ou em até 7x de R$ 5,87</p>
-      <div class="countdown">
-        <span id="days">00</span> :
-        <span id="hours">00</span> :
-        <span id="minutes">00</span> :
-        <span id="seconds">00</span>
-      </div>
-      <p>✅ Ebook completo em PDF<br>✅ Planner de Transição Alimentar<br>✅ Garantia incondicional de 7 dias</p>
-      <a href="https://pay.hotmart.com/E102479844P" target="_blank" class="btn">Quero garantir meu desconto</a>
-      <p><small>Visa • Mastercard • Pix</small></p>
-    </section>
+.old{
+  text-decoration:line-through;
+  opacity:.5;
+  font-size:22px;
+}
 
-    <section>
-      <h2>Dúvidas Frequentes</h2>
-      <p><strong>Para qual idade o ebook é indicado?</strong><br>O guia respeita o ritmo individual de cada bebê.</p>
-      <p><strong>O desmame é imediato?</strong><br>Não. O foco é uma transição gradual e respeitosa.</p>
-      <p><strong>E se eu me arrepender da compra?</strong><br>Você tem 7 dias de garantia incondicional.</p>
-    </section>
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(30px);}
+  to{opacity:1;transform:translateY(0);}
+}
 
-    <footer>
-      <p>©️ 2024 Além do Leite. Todos os direitos reservados.</p>
-      <p>Aviso: Este conteúdo não substitui a consulta com profissionais de saúde.</p>
-    </footer>
+/* ===== SCROLL REVEAL ===== */
+.reveal{
+  opacity:0;
+  transform:translateY(50px);
+  transition:all 1s ease;
+}
 
-    <div class="fixed-cta"><a href="https://pay.hotmart.com/E102479844P">Quero meu E-book Agora!</a></div>
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
 
-    <script>
-      const countdownDate = new Date();
-      countdownDate.setHours(countdownDate.getHours()+24);
+/* ===== MOBILE ===== */
+@media(max-width:768px){
+  h1{font-size:36px;}
+  h2{font-size:28px;}
+  p{font-size:20px;}
+  .price{font-size:48px;}
+  .hero{background-attachment:scroll;}
+}
 
-      function updateCountdown(){
-          const now = new Date().getTime();
-          const distance = countdownDate - now;
-          if(distance<0) return;
-          const days = Math.floor(distance/(1000*60*60*24));
-          const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-          const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-          const seconds = Math.floor((distance%(1000*60))/1000);
-          document.getElementById('days').textContent = days.toString().padStart(2,'0');
-          document.getElementById('hours').textContent = hours.toString().padStart(2,'0');
-          document.getElementById('minutes').textContent = minutes.toString().padStart(2,'0');
-          document.getElementById('seconds').textContent = seconds.toString().padStart(2,'0');
-      }
-      setInterval(updateCountdown,1000);
-      updateCountdown();
+</style>
+</head>
 
-      const slides = document.querySelectorAll('.testimonial-slide');
-      let current = 0;
-      setInterval(()=>{
-          slides[current].classList.remove('active');
-          current = (current+1)%slides.length;
-          slides[current].classList.add('active');
-      },5000);
-    </script>
-  </body>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <h1>Desmamar não é abandonar.<br>É <span class="marker">amadurecer juntas.</span></h1>
+    <p>Aprenda como encerrar esse ciclo com amor e segurança.</p>
+    <a href="https://pay.hotmart.com/E102479844P" class="btn">QUERO MEU ACESSO</a>
+  </div>
+</section>
+
+<!-- HISTÓRIA -->
+<section>
+  <h2 class="reveal">Este E-book é para você</h2>
+  <p class="reveal">Sou Cárita, mãe do Antony.</p>
+  <p class="reveal">A parte mais difícil não foi o desmame… foi <span class="highlight-decision">DECIDIR</span> desmamá-lo.</p>
+  <p class="reveal">O medo de perder o vínculo era real.</p>
+  <p class="reveal">Mas descobri que o vínculo não está no peito. Está na presença.</p>
+  <a href="https://pay.hotmart.com/E102479844P" class="btn reveal">Quero meu E-book</a>
+</section>
+
+<!-- OFERTA -->
+<section class="price-section">
+  <h2>Oferta Especial</h2>
+  <p class="old">De R$147,00</p>
+  <div class="price">R$37</div>
+  <p>Garantia incondicional de 7 dias</p>
+  <a href="https://pay.hotmart.com/E102479844P" class="btn">Garantir meu desconto</a>
+</section>
+
+<script>
+
+// Scroll Reveal
+const reveals = document.querySelectorAll('.reveal');
+window.addEventListener('scroll',()=>{
+  reveals.forEach(el=>{
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+    if(elementTop < windowHeight - 100){
+      el.classList.add('active');
+    }
+  });
+});
+
+</script>
+
+</body>
 </html>
