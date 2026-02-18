@@ -7,6 +7,26 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src='https://connect.facebook.net/en_US/fbevents.js';
+s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script');
+
+fbq('init', '1992063235525885');
+fbq('track', 'PageView');
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1992063235525885&ev=PageView&noscript=1"/>
+</noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
 
 /* ===== GLOBAL ===== */
@@ -230,55 +250,23 @@ p{
   <div class="hero-content">
     <h1>Desmamar não é abandonar.<br>É amadurecer juntas.</h1>
     <p>Aprenda como encerrar esse ciclo com amor e segurança.</p>
-    <a href="https://pay.hotmart.com/E102479844P" class="btn">QUERO MEU ACESSO</a>
+    <a href="https://pay.hotmart.com/E102479844P" class="btn" onclick="fbq('track','InitiateCheckout');">QUERO MEU ACESSO</a>
   </div>
 </section>
 
 <!-- SEÇÃO MEMORÁVEL -->
 <section class="story-section">
   <div class="story-container">
-
     <h2 class="reveal">Se você está aqui… talvez esteja vivendo isso também.</h2>
-
-    <p class="reveal">
-      Olá, meu nome é <strong>Cárita</strong>. Sou a mamãe do <strong>Antony</strong>.
-    </p>
-
-    <p class="reveal">
-      Eu o amamentei até <strong>1 ano e 5 meses</strong>.  
-      Foi uma fase linda. Intensa. Cheia de entrega.
-    </p>
-
-    <p class="reveal">
-      Mas, aos poucos… meu corpo começou a pedir socorro.
-    </p>
-
-    <p class="reveal">
-      Eu estava cansada. Muito cansada.  
-      Há 1 ano e 5 meses eu não dormia uma noite inteira.
-    </p>
-
-    <p class="decision-line reveal">
-      A <span class="highlight-decision">DECISÃO</span>.
-    </p>
-
-    <p class="reveal">
-      Não foi o desmame que doeu primeiro. Foi decidir.
-    </p>
-
-    <p class="reveal">
-      O medo de perder o vínculo.  
-      O medo dele “se esquecer” de mim.
-    </p>
-
-    <p class="strong-line reveal">
-      E talvez você esteja exatamente aí agora.
-    </p>
-
-    <p class="final-embrace reveal">
-      Este E-book é para você que está vivendo a <span class="highlight-decision">DECISÃO</span>.
-    </p>
-
+    <p class="reveal">Olá, meu nome é <strong>Cárita</strong>. Sou a mamãe do <strong>Antony</strong>.</p>
+    <p class="reveal">Eu o amamentei até <strong>1 ano e 5 meses</strong>. Foi uma fase linda. Intensa. Cheia de entrega.</p>
+    <p class="reveal">Mas, aos poucos… meu corpo começou a pedir socorro.</p>
+    <p class="reveal">Eu estava cansada. Muito cansada. Há 1 ano e 5 meses eu não dormia uma noite inteira.</p>
+    <p class="decision-line reveal">A <span class="highlight-decision">DECISÃO</span>.</p>
+    <p class="reveal">Não foi o desmame que doeu primeiro. Foi decidir.</p>
+    <p class="reveal">O medo de perder o vínculo. O medo dele “se esquecer” de mim.</p>
+    <p class="strong-line reveal">E talvez você esteja exatamente aí agora.</p>
+    <p class="final-embrace reveal">Este E-book é para você que está vivendo a <span class="highlight-decision">DECISÃO</span>.</p>
   </div>
 </section>
 
@@ -310,12 +298,10 @@ p{
   <p class="old">De R$147,00</p>
   <div class="price">R$37</div>
   <p>Garantia incondicional de 7 dias</p>
-  <a href="https://pay.hotmart.com/E102479844P" class="btn">Garantir meu desconto</a>
+  <a href="https://pay.hotmart.com/E102479844P" class="btn" onclick="fbq('track','InitiateCheckout');">Garantir meu desconto</a>
 </section>
 
 <script>
-
-// Scroll Reveal
 const reveals = document.querySelectorAll('.reveal');
 window.addEventListener('scroll',()=>{
   reveals.forEach(el=>{
@@ -327,7 +313,6 @@ window.addEventListener('scroll',()=>{
   });
 });
 
-// Depoimentos rotativos
 const testimonials = document.querySelectorAll('.testimonial');
 let index = 0;
 setInterval(()=>{
@@ -335,8 +320,8 @@ setInterval(()=>{
   index = (index+1) % testimonials.length;
   testimonials[index].classList.add('active');
 },4000);
-
 </script>
 
 </body>
 </html>
+
