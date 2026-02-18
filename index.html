@@ -24,7 +24,6 @@ src="https://www.facebook.com/tr?id=1992063235525885&ev=PageView&noscript=1"
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* (seu CSS permanece igual, mantive tudo) */
 body {
 margin: 0;
 font-family: 'Montserrat', sans-serif;
@@ -119,6 +118,57 @@ text-align: center;
 padding: 30px 15px;
 font-size: 0.9rem;
 }
+
+/* Seção emocional responsiva */
+.emotional-section {
+  background: #fff5f0;
+  padding: 50px 20px;
+  border-radius: 12px;
+  margin: 40px auto;
+}
+
+.emotional-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 900px;
+  margin: auto;
+  gap: 30px;
+  opacity: 0;                  /* começa invisível */
+  transform: translateY(20px);  /* leve movimento para baixo */
+  animation: fadeIn 1s forwards; /* animação de 1s */
+  animation-delay: 0.3s;        /* começa depois de 0.3s */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.emotional-image img {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.emotional-text {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .emotional-container {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+  .emotional-image, .emotional-text {
+    flex: 1;
+  }
+  .emotional-text {
+    text-align: left;
+  }
+}
 </style>
 </head>
 
@@ -140,6 +190,32 @@ QUERO O MEU ACESSO AGORA
 
 <p><small>Acesso imediato e seguro</small></p>
 </header>
+
+<!-- Seção emocional com fade-in -->
+<section class="emotional-section">
+  <div class="emotional-container">
+    <div class="emotional-image">
+      <img src="foto-antony.jpg" alt="Cárita com Antony">
+    </div>
+    <div class="emotional-text">
+      <h2>Um momento difícil, mas necessário</h2>
+      <p>Olá, sou <strong>Cárita</strong>, mamãe do <strong>Antony</strong>.</p>
+      <p>Amamentei meu filho até <strong>1 ano e 5 meses</strong>, e cada momento foi <strong>puro amor</strong> 💛</p>
+      <p>Mas chegou um dia em que o cansaço físico e emocional falou mais alto. Eu não dormia direito e sabia que precisava decidir: <strong>continuar amamentando ou desmamar</strong>.</p>
+      <p>A parte mais difícil não foi o desmame… <br>foi <strong>decidir desmamá-lo</strong>. O medo de perder o vínculo era real.</p>
+
+      <h3>Este E-book é para você</h3>
+      <p>Se você está pensando em desmamar, <strong>esse é o começo do seu processo</strong>. Meu E-book vai te mostrar <strong>como saber se você e seu bebê estão prontos</strong>, sem culpa, com amor e segurança.</p>
+      <p>💌 <strong>Você não está sozinha!</strong></p>
+      <a href="https://pay.hotmart.com/E102479844P" 
+         target="_blank" 
+         class="btn"
+         onclick="fbq('track', 'InitiateCheckout');">
+      Quero meu E-book
+      </a>
+    </div>
+  </div>
+</section>
 
 <section>
 <h2>Eu sei exatamente o que você está sentindo…</h2>
