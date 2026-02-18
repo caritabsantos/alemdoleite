@@ -2,165 +2,164 @@
 <html lang="pt-BR">
 <head>
 
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1992063235525885');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1992063235525885&ev=PageView&noscript=1"/></noscript>
-<!-- End Meta Pixel Code -->
-
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+/* ===============================
+   Estilo Global
+   =============================== */
 body {
-margin: 0;
-font-family: 'Montserrat', sans-serif;
-background: #fff9f7;
-color: #5a3a2e;
-line-height: 1.8;
-font-size: 16px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #fff9f7;
+    color: #5a3a2e;
+    line-height: 1.8;
+    font-size: 18px;
 }
 
 h1, h2, h3 {
-font-family: 'Playfair Display', serif;
-color: #6b3f2c;
+    font-family: 'Playfair Display', serif;
+    color: #6b3f2c;
 }
 
+h1 { font-size: 36px; margin-bottom: 20px; text-align: center; }
+h2 { font-size: 28px; margin-bottom: 16px; text-align: center; }
+h3 { font-size: 22px; margin-bottom: 12px; }
+
+/* ===============================
+   Header
+   =============================== */
 header {
-background: linear-gradient(180deg, #f6d6d0 0%, #fff9f7 100%);
-padding: 60px 20px;
-text-align: center;
+    background: linear-gradient(180deg, #f6d6d0 0%, #fff9f7 100%);
+    padding: 60px 20px;
+    text-align: center;
 }
 
-header h1 {
-font-size: 2.6rem;
-margin-bottom: 15px;
-}
+header p { font-size: 1.25rem; max-width: 650px; margin: 0 auto 30px; }
 
-header p {
-font-size: 1.15rem;
-max-width: 650px;
-margin: 0 auto 30px;
-}
-
+/* ===============================
+   Botões e CTA
+   =============================== */
 .btn {
-display: inline-block;
-background: #8b5e3c;
-color: #ffffff;
-padding: 16px 32px;
-border-radius: 40px;
-text-decoration: none;
-font-size: 1.1rem;
-font-weight: 500;
-box-shadow: 0 8px 20px rgba(139, 94, 60, 0.25);
-transition: all 0.3s ease;
+    display: inline-block;
+    background: #ff6f61; /* destaque para conversão */
+    color: #ffffff;
+    padding: 18px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: 600;
+    box-shadow: 0 8px 25px rgba(255, 111, 97, 0.35);
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
-background: #734a30;
-transform: translateY(-2px);
+    background: #e65b50;
+    transform: translateY(-3px);
 }
 
-section {
-padding: 60px 20px;
-max-width: 900px;
-margin: auto;
-}
+/* ===============================
+   Seções
+   =============================== */
+section { padding: 60px 20px; max-width: 900px; margin: auto; }
 
-section h2 {
-font-size: 2rem;
-margin-bottom: 20px;
-}
+p, li { font-size: 18px; margin-bottom: 16px; }
+ul { list-style: none; padding: 0; }
+ul li { margin-bottom: 10px; }
 
-ul {
-list-style: none;
-padding: 0;
-}
-
-ul li {
-margin-bottom: 10px;
-}
-
+/* ===============================
+   Testimonials
+   =============================== */
 .testimonial {
-background: #fdf0ec;
-border-left: 4px solid #d9a28f;
-padding: 25px;
-margin: 30px 0;
-border-radius: 12px;
-font-style: italic;
+    background: #fff0f0;
+    border-left: 6px solid #ff6f61;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 12px;
+    font-style: italic;
 }
 
+/* ===============================
+   Price-box otimizada para conversão
+   =============================== */
 .price-box {
-text-align: center;
+    text-align: center;
+    background: #ffe7e1;
+    border-radius: 20px;
+    padding: 40px 20px;
+    margin: 50px auto;
+    box-shadow: 0 10px 30px rgba(255, 111, 97, 0.2);
 }
 
 .old-price {
-text-decoration: line-through;
-color: #bfa9a0;
-font-size: 1.2rem;
+    text-decoration: line-through;
+    color: #bfa9a0;
+    font-size: 1.5rem;
 }
 
-footer {
-background: #f6d6d0;
-text-align: center;
-padding: 30px 15px;
-font-size: 0.9rem;
+.price-box h1 {
+    font-size: 48px;
+    margin: 10px 0;
+    color: #ff3f1f;
 }
 
-/* Seção emocional */
+.price-box p { font-size: 20px; margin-bottom: 16px; }
+
+/* ===============================
+   Footer
+   =============================== */
+footer { background: #f6d6d0; text-align: center; padding: 30px 15px; font-size: 1rem; }
+
+/* ===============================
+   Seção emocional
+   =============================== */
 .emotional-section {
-  background: #fff5f0;
-  padding: 50px 20px;
-  border-radius: 12px;
-  margin: 40px auto;
-  max-width: 900px;
+    background: #fff5f0;
+    padding: 50px 20px;
+    border-radius: 12px;
+    margin: 40px auto;
+    max-width: 900px;
 }
 
 .emotional-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
 }
 
 .emotional-image img {
-  max-width: 100%;
-  border-radius: 12px;
+    max-width: 100%;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
-.emotional-text {
-  text-align: center;
-}
+.emotional-text { text-align: center; }
 
-@media (min-width: 768px) {
-  .emotional-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .emotional-text {
-    text-align: center;
-  }
-}
-
-/* Fade-in sequencial */
+/* ===============================
+   Fade-in sequencial
+   =============================== */
 .fade-paragraph {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 0.8s forwards;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 0.8s forwards;
 }
 
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
+
+/* ===============================
+   Responsivo para celular
+   =============================== */
+@media (max-width: 768px) {
+    body { font-size: 20px; line-height: 1.8; }
+    h1 { font-size: 28px; }
+    h2 { font-size: 24px; }
+    h3 { font-size: 20px; }
+    p, li { font-size: 20px; }
+    .btn { font-size: 20px; padding: 16px 28px; }
+    section { padding: 30px 15px; }
+    .price-box h1 { font-size: 36px; }
 }
 </style>
 </head>
@@ -176,29 +175,21 @@ Descubra como encerrar esse ciclo com amor, segurança e sem traumas para você 
 
 <a href="https://pay.hotmart.com/E102479844P" 
    target="_blank" 
-   class="btn"
-   onclick="fbq('track', 'InitiateCheckout');">
+   class="btn">
 QUERO O MEU ACESSO AGORA
 </a>
 
 <p><small>Acesso imediato e seguro</small></p>
 </header>
 
-<!-- Seção emocional com duas fotos antes do texto -->
 <section class="emotional-section">
   <div class="emotional-container">
-    
-    <!-- Primeira foto -->
     <div class="emotional-image fade-paragraph" style="animation-delay:0.3s;">
       <img src="images/foto.antony.jpg" alt="Cárita com Antony">
     </div>
-
-    <!-- Segunda foto -->
     <div class="emotional-image fade-paragraph" style="margin-top:20px; animation-delay:0.6s;">
       <img src="images/foto.antony2.jpg" alt="Cárita com Antony">
     </div>
-
-    <!-- Texto emocional -->
     <div class="emotional-text">
       <h2 class="fade-paragraph" style="animation-delay:0.9s;">Um momento difícil, mas necessário</h2>
       <p class="fade-paragraph" style="animation-delay:1.1s;">Olá, sou <strong>Cárita</strong>, mamãe do <strong>Antony</strong>.</p>
@@ -212,8 +203,7 @@ QUERO O MEU ACESSO AGORA
       <a href="https://pay.hotmart.com/E102479844P" 
          target="_blank" 
          class="btn fade-paragraph"
-         style="animation-delay:2.5s;"
-         onclick="fbq('track', 'InitiateCheckout');">
+         style="animation-delay:2.5s;">
       Quero meu E-book
       </a>
     </div>
@@ -232,7 +222,7 @@ Você ama seu filho profundamente, mas sente vontade de retomar sua autonomia �
 Entre julgamentos e pressões externas, como ouvir a sua própria voz?
 </p>
 
-<blockquote style="background:#fdf0ec; border-left:4px solid #d9a28f; padding:25px; border-radius:12px;">
+<blockquote class="testimonial">
 “O desmame não precisa ser um corte bruto. Existe um caminho de transição.”
 </blockquote>
 </section>
@@ -248,27 +238,7 @@ Entre julgamentos e pressões externas, como ouvir a sua própria voz?
 </ul>
 </section>
 
-<section>
-<h2>O que as mães dizem</h2>
-
-<div class="testimonial">
-“Eu estava exausta e chorava toda vez que meu filho pedia peito. Entendi que desmamar não era deixar de amar.”
-<br><strong>— Mariana S., mãe do Leo (2 anos)</strong>
-</div>
-
-<div class="testimonial">
-“Foi um processo de 3 semanas lindo e sem choros desesperados.”
-<br><strong>— Carla F., mãe da Bia (18 meses)</strong>
-</div>
-
-<div class="testimonial">
-“O capítulo sobre desmame noturno foi um divisor de águas.”
-<br><strong>— Juliana M., mãe do Théo (2 anos e meio)</strong>
-</div>
-</section>
-
-<section>
-<div class="price-box">
+<section class="price-box">
 <h2>Oferta de Lançamento</h2>
 <p class="old-price">De R$ 147,00</p>
 <h1>R$ 37,00</h1>
@@ -282,13 +252,11 @@ Entre julgamentos e pressões externas, como ouvir a sua própria voz?
 
 <a href="https://pay.hotmart.com/E102479844P" 
    target="_blank" 
-   class="btn"
-   onclick="fbq('track', 'InitiateCheckout');">
+   class="btn">
 Quero garantir meu desconto
 </a>
 
 <p><small>Visa • Mastercard • Pix</small></p>
-</div>
 </section>
 
 <section>
@@ -300,9 +268,7 @@ Quero garantir meu desconto
 
 <footer>
 <p>©️ 2024 Além do Leite. Todos os direitos reservados.</p>
-<p>
-Aviso: Este conteúdo não substitui a consulta com profissionais de saúde.
-</p>
+<p>Aviso: Este conteúdo não substitui a consulta com profissionais de saúde.</p>
 </footer>
 
 </body>
