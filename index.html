@@ -30,9 +30,9 @@ h1,h2,h3{
 }
 
 h1{
-  font-size:48px;
+  font-size:46px;
   text-align:center;
-  line-height:1.2;
+  line-height:1.3;
 }
 
 h2{
@@ -42,8 +42,8 @@ h2{
 
 p{
   font-size:20px;
-  line-height:1.8;
-  margin-bottom:18px;
+  line-height:1.9;
+  margin-bottom:20px;
 }
 
 /* ===== HERO ===== */
@@ -67,19 +67,13 @@ p{
   z-index:2;
 }
 
-.marker{
-  background:none; /* removido fundo */
-  font-weight:700;
-}
-
-/* ===== BOTÕES ===== */
 .btn{
   display:inline-block;
   background:linear-gradient(90deg,#ff6f61,#ff3f1f);
   padding:18px 38px;
   color:white;
   border-radius:60px;
-  font-size:22px;
+  font-size:20px;
   font-weight:600;
   text-decoration:none;
   box-shadow:0 10px 30px rgba(255,80,60,0.4);
@@ -91,11 +85,46 @@ p{
   box-shadow:0 15px 40px rgba(255,80,60,0.6);
 }
 
-/* ===== DECIDIR ===== */
+/* ===== SEÇÃO MEMORÁVEL ===== */
+.story-section{
+  background: linear-gradient(180deg,#fffaf8,#fff1ec);
+  padding:120px 20px;
+}
+
+.story-container{
+  max-width:800px;
+  margin:auto;
+  text-align:center;
+}
+
+.story-container p{
+  font-size:22px;
+  line-height:1.9;
+  margin-bottom:24px;
+}
+
+.decision-line{
+  font-size:34px;
+  font-weight:700;
+  margin:40px 0;
+}
+
 .highlight-decision{
-  font-size:36px;
+  font-size:44px;
   font-weight:800;
   color:#ff3f1f;
+  letter-spacing:2px;
+}
+
+.strong-line{
+  font-size:24px;
+  font-weight:600;
+}
+
+.final-embrace{
+  font-size:26px;
+  font-weight:600;
+  margin-top:30px;
 }
 
 /* ===== BENEFÍCIOS ===== */
@@ -150,7 +179,7 @@ p{
   opacity:1;
 }
 
-/* ===== PRICE ===== */
+/* ===== OFERTA ===== */
 .price-section{
   background:linear-gradient(180deg,#ffe8e4,#fffaf8);
   text-align:center;
@@ -199,18 +228,58 @@ p{
 <!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Desmamar não é abandonar.<br>É <span class="marker">amadurecer juntas.</span></h1>
+    <h1>Desmamar não é abandonar.<br>É amadurecer juntas.</h1>
     <p>Aprenda como encerrar esse ciclo com amor e segurança.</p>
     <a href="https://pay.hotmart.com/E102479844P" class="btn">QUERO MEU ACESSO</a>
   </div>
 </section>
 
-<!-- HISTÓRIA -->
-<section>
-  <h2 class="reveal">Este E-book é para você</h2>
-  <p class="reveal">A parte mais difícil não foi o desmame… foi <span class="highlight-decision">DECIDIR</span> desmamá-lo.</p>
-  <p class="reveal">O medo de perder o vínculo era real.</p>
-  <p class="reveal">Mas descobri que o vínculo não está no peito. Está na presença.</p>
+<!-- SEÇÃO MEMORÁVEL -->
+<section class="story-section">
+  <div class="story-container">
+
+    <h2 class="reveal">Se você está aqui… talvez esteja vivendo isso também.</h2>
+
+    <p class="reveal">
+      Olá, meu nome é <strong>Cárita</strong>. Sou a mamãe do <strong>Antony</strong>.
+    </p>
+
+    <p class="reveal">
+      Eu o amamentei até <strong>1 ano e 5 meses</strong>.  
+      Foi uma fase linda. Intensa. Cheia de entrega.
+    </p>
+
+    <p class="reveal">
+      Mas, aos poucos… meu corpo começou a pedir socorro.
+    </p>
+
+    <p class="reveal">
+      Eu estava cansada. Muito cansada.  
+      Há 1 ano e 5 meses eu não dormia uma noite inteira.
+    </p>
+
+    <p class="decision-line reveal">
+      A <span class="highlight-decision">DECISÃO</span>.
+    </p>
+
+    <p class="reveal">
+      Não foi o desmame que doeu primeiro. Foi decidir.
+    </p>
+
+    <p class="reveal">
+      O medo de perder o vínculo.  
+      O medo dele “se esquecer” de mim.
+    </p>
+
+    <p class="strong-line reveal">
+      E talvez você esteja exatamente aí agora.
+    </p>
+
+    <p class="final-embrace reveal">
+      Este E-book é para você que está vivendo a <span class="highlight-decision">DECISÃO</span>.
+    </p>
+
+  </div>
 </section>
 
 <!-- BENEFÍCIOS -->
