@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-
 <meta charset="UTF-8">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
-/* ===============================
-   Estilo Global
-   =============================== */
+/* ====== Global ====== */
 body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
@@ -17,149 +14,148 @@ body {
     line-height: 1.8;
     font-size: 18px;
 }
+h1,h2,h3 { font-family: 'Playfair Display', serif; color: #6b3f2c; }
+h1{ font-size:36px;text-align:center;margin-bottom:20px; }
+h2{ font-size:28px;text-align:center;margin-bottom:16px; }
+h3{ font-size:22px;margin-bottom:12px; }
 
-h1, h2, h3 {
-    font-family: 'Playfair Display', serif;
-    color: #6b3f2c;
+header{ background:linear-gradient(180deg,#f6d6d0 0%,#fff9f7 100%); padding:60px 20px;text-align:center; }
+header p{ font-size:1.25rem; max-width:650px; margin:0 auto 30px; }
+
+/* ====== Botões CTA ====== */
+.btn{
+    display:inline-block;
+    background:#ff6f61;
+    color:#fff;
+    padding:18px 36px;
+    border-radius:50px;
+    text-decoration:none;
+    font-size:1.3rem;
+    font-weight:600;
+    box-shadow:0 10px 30px rgba(255,111,97,0.35);
+    transition:all 0.3s ease;
+    position:relative;
+}
+.btn::after{
+    content:'➡';
+    position:absolute;
+    right:20px;
+    font-size:1.3rem;
+    transition:right 0.3s;
+}
+.btn:hover::after{ right:10px; }
+.btn:hover{ background:#e65b50; transform:translateY(-3px); }
+
+/* ====== Barra fixa mobile CTA ====== */
+.fixed-cta {
+    display:none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background:#ff6f61;
+    color:#fff;
+    text-align:center;
+    padding:15px 0;
+    z-index:9999;
+    box-shadow:0 -5px 15px rgba(0,0,0,0.2);
+}
+.fixed-cta a{
+    color:#fff;
+    font-size:1.25rem;
+    font-weight:600;
+    text-decoration:none;
 }
 
-h1 { font-size: 36px; margin-bottom: 20px; text-align: center; }
-h2 { font-size: 28px; margin-bottom: 16px; text-align: center; }
-h3 { font-size: 22px; margin-bottom: 12px; }
+/* ====== Seções ====== */
+section{ padding:60px 20px; max-width:900px; margin:auto; }
+p,li{ font-size:18px;margin-bottom:16px; }
+ul{ list-style:none;padding:0; }
+ul li{ margin-bottom:10px; }
 
-/* ===============================
-   Header
-   =============================== */
-header {
-    background: linear-gradient(180deg, #f6d6d0 0%, #fff9f7 100%);
-    padding: 60px 20px;
-    text-align: center;
+/* ====== Testimonials animados ====== */
+.testimonials-container{
+    position: relative;
+    overflow:hidden;
+    height:140px;
+}
+.testimonial-slide{
+    position:absolute;
+    top:0;
+    left:100%;
+    width:100%;
+    opacity:0;
+    transition: all 0.6s ease;
+}
+.testimonial-slide.active{
+    left:0;
+    opacity:1;
 }
 
-header p { font-size: 1.25rem; max-width: 650px; margin: 0 auto 30px; }
-
-/* ===============================
-   Botões e CTA
-   =============================== */
-.btn {
-    display: inline-block;
-    background: #ff6f61; /* destaque para conversão */
-    color: #ffffff;
-    padding: 18px 36px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    box-shadow: 0 8px 25px rgba(255, 111, 97, 0.35);
-    transition: all 0.3s ease;
+/* ====== Price-box ultra-conversão ====== */
+.price-box{
+    text-align:center;
+    background:#ffe7e1;
+    border-radius:20px;
+    padding:50px 20px;
+    margin:50px auto;
+    box-shadow:0 10px 35px rgba(255,111,97,0.25);
+    position:relative;
 }
-
-.btn:hover {
-    background: #e65b50;
-    transform: translateY(-3px);
+.price-box::before{
+    content:'🔥 Oferta por tempo limitado!';
+    position:absolute;
+    top:-25px;
+    left:50%;
+    transform:translateX(-50%);
+    background:#ff6f61;
+    color:white;
+    padding:5px 12px;
+    font-size:0.9rem;
+    border-radius:20px;
+    font-weight:600;
+    box-shadow:0 4px 10px rgba(0,0,0,0.15);
 }
+.old-price{text-decoration:line-through;color:#bfa9a0;font-size:1.5rem;}
+.price-box h1{ font-size:48px; color:#ff3f1f; margin:10px 0; }
+.price-box p{ font-size:20px; margin-bottom:16px; }
 
-/* ===============================
-   Seções
-   =============================== */
-section { padding: 60px 20px; max-width: 900px; margin: auto; }
-
-p, li { font-size: 18px; margin-bottom: 16px; }
-ul { list-style: none; padding: 0; }
-ul li { margin-bottom: 10px; }
-
-/* ===============================
-   Testimonials
-   =============================== */
-.testimonial {
-    background: #fff0f0;
-    border-left: 6px solid #ff6f61;
-    padding: 25px;
-    margin: 30px 0;
-    border-radius: 12px;
-    font-style: italic;
+/* ====== Contador regressivo ====== */
+.countdown{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    margin-top:15px;
+    font-size:18px;
+    font-weight:600;
+    color:#ff3f1f;
 }
+.countdown span{ background:#fff; padding:8px 12px; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.1); }
 
-/* ===============================
-   Price-box otimizada para conversão
-   =============================== */
-.price-box {
-    text-align: center;
-    background: #ffe7e1;
-    border-radius: 20px;
-    padding: 40px 20px;
-    margin: 50px auto;
-    box-shadow: 0 10px 30px rgba(255, 111, 97, 0.2);
-}
+/* ====== Footer ====== */
+footer{ background:#f6d6d0; text-align:center; padding:30px 15px; font-size:1rem; }
 
-.old-price {
-    text-decoration: line-through;
-    color: #bfa9a0;
-    font-size: 1.5rem;
-}
+/* ====== Seção emocional ====== */
+.emotional-section{ background:#fff5f0; padding:50px 20px; border-radius:12px; margin:40px auto; max-width:900px; }
+.emotional-container{ display:flex; flex-direction:column; align-items:center; gap:30px; }
+.emotional-image img{ max-width:100%; border-radius:12px; box-shadow:0 8px 20px rgba(0,0,0,0.1); }
+.emotional-text{text-align:center;}
 
-.price-box h1 {
-    font-size: 48px;
-    margin: 10px 0;
-    color: #ff3f1f;
-}
+/* ====== Fade-in ====== */
+.fade-paragraph{ opacity:0; transform:translateY(20px); animation:fadeIn 0.8s forwards; }
+@keyframes fadeIn{ to{opacity:1; transform:translateY(0);} }
 
-.price-box p { font-size: 20px; margin-bottom: 16px; }
-
-/* ===============================
-   Footer
-   =============================== */
-footer { background: #f6d6d0; text-align: center; padding: 30px 15px; font-size: 1rem; }
-
-/* ===============================
-   Seção emocional
-   =============================== */
-.emotional-section {
-    background: #fff5f0;
-    padding: 50px 20px;
-    border-radius: 12px;
-    margin: 40px auto;
-    max-width: 900px;
-}
-
-.emotional-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-}
-
-.emotional-image img {
-    max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-}
-
-.emotional-text { text-align: center; }
-
-/* ===============================
-   Fade-in sequencial
-   =============================== */
-.fade-paragraph {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeIn 0.8s forwards;
-}
-
-@keyframes fadeIn { to { opacity: 1; transform: translateY(0); } }
-
-/* ===============================
-   Responsivo para celular
-   =============================== */
-@media (max-width: 768px) {
-    body { font-size: 20px; line-height: 1.8; }
-    h1 { font-size: 28px; }
-    h2 { font-size: 24px; }
-    h3 { font-size: 20px; }
-    p, li { font-size: 20px; }
-    .btn { font-size: 20px; padding: 16px 28px; }
-    section { padding: 30px 15px; }
-    .price-box h1 { font-size: 36px; }
+/* ====== Responsivo ====== */
+@media(max-width:768px){
+    body{ font-size:20px; line-height:1.8; }
+    h1{ font-size:28px; }
+    h2{ font-size:24px; }
+    h3{ font-size:20px; }
+    p,li{ font-size:20px; }
+    .btn{ font-size:20px; padding:16px 28px; }
+    section{ padding:30px 15px; }
+    .price-box h1{ font-size:36px; }
+    .fixed-cta{ display:block; }
 }
 </style>
 </head>
@@ -168,74 +164,40 @@ footer { background: #f6d6d0; text-align: center; padding: 30px 15px; font-size:
 
 <header>
 <h1>Para mães que buscam equilíbrio</h1>
-<p>
-Você sente que chegou a hora de desmamar, mas a culpa não te deixa seguir?
-Descubra como encerrar esse ciclo com amor, segurança e sem traumas para você e seu bebê.
-</p>
-
-<a href="https://pay.hotmart.com/E102479844P" 
-   target="_blank" 
-   class="btn">
-QUERO O MEU ACESSO AGORA
-</a>
-
+<p>Você sente que chegou a hora de desmamar, mas a culpa não te deixa seguir? Descubra como encerrar esse ciclo com amor, segurança e sem traumas para você e seu bebê.</p>
+<a href="https://pay.hotmart.com/E102479844P" target="_blank" class="btn">QUERO O MEU ACESSO AGORA</a>
 <p><small>Acesso imediato e seguro</small></p>
 </header>
 
 <section class="emotional-section">
-  <div class="emotional-container">
-    <div class="emotional-image fade-paragraph" style="animation-delay:0.3s;">
-      <img src="images/foto.antony.jpg" alt="Cárita com Antony">
-    </div>
-    <div class="emotional-image fade-paragraph" style="margin-top:20px; animation-delay:0.6s;">
-      <img src="images/foto.antony2.jpg" alt="Cárita com Antony">
-    </div>
-    <div class="emotional-text">
-      <h2 class="fade-paragraph" style="animation-delay:0.9s;">Um momento difícil, mas necessário</h2>
-      <p class="fade-paragraph" style="animation-delay:1.1s;">Olá, sou <strong>Cárita</strong>, mamãe do <strong>Antony</strong>.</p>
-      <p class="fade-paragraph" style="animation-delay:1.3s;">Amamentei meu filho até <strong>1 ano e 5 meses</strong>, e cada momento foi <strong>puro amor</strong> 💛</p>
-      <p class="fade-paragraph" style="animation-delay:1.5s;">Mas chegou um dia em que o cansaço físico e emocional falou mais alto. Eu não dormia direito e sabia que precisava decidir: <strong>continuar amamentando ou desmamar</strong>.</p>
-      <p class="fade-paragraph" style="animation-delay:1.7s;">A parte mais difícil não foi o desmame… <br>foi <strong>decidir desmamá-lo</strong>. O medo de perder o vínculo era real.</p>
-
-      <h3 class="fade-paragraph" style="animation-delay:1.9s;">Este E-book é para você</h3>
-      <p class="fade-paragraph" style="animation-delay:2.1s;">Se você está pensando em desmamar, <strong>esse é o começo do seu processo</strong>. Meu E-book vai te mostrar <strong>como saber se você e seu bebê estão prontos</strong>, sem culpa, com amor e segurança.</p>
-      <p class="fade-paragraph" style="animation-delay:2.3s;">💌 <strong>Você não está sozinha!</strong></p>
-      <a href="https://pay.hotmart.com/E102479844P" 
-         target="_blank" 
-         class="btn fade-paragraph"
-         style="animation-delay:2.5s;">
-      Quero meu E-book
-      </a>
-    </div>
-  </div>
+<div class="emotional-container">
+<div class="emotional-image fade-paragraph" style="animation-delay:0.3s;"><img src="images/foto.antony.jpg" alt="Cárita com Antony"></div>
+<div class="emotional-image fade-paragraph" style="margin-top:20px; animation-delay:0.6s;"><img src="images/foto.antony2.jpg" alt="Cárita com Antony"></div>
+<div class="emotional-text">
+<h2 class="fade-paragraph" style="animation-delay:0.9s;">Um momento difícil, mas necessário</h2>
+<p class="fade-paragraph" style="animation-delay:1.1s;">Olá, sou <strong>Cárita</strong>, mamãe do <strong>Antony</strong>.</p>
+<p class="fade-paragraph" style="animation-delay:1.3s;">Amamentei meu filho até <strong>1 ano e 5 meses</strong>, e cada momento foi <strong>puro amor</strong> 💛</p>
+<p class="fade-paragraph" style="animation-delay:1.5s;">Mas chegou um dia em que o cansaço físico e emocional falou mais alto. Eu não dormia direito e sabia que precisava decidir: <strong>continuar amamentando ou desmamar</strong>.</p>
+<p class="fade-paragraph" style="animation-delay:1.7s;">A parte mais difícil não foi o desmame… <br>foi <strong>decidir desmamá-lo</strong>. O medo de perder o vínculo era real.</p>
+<h3 class="fade-paragraph" style="animation-delay:1.9s;">Este E-book é para você</h3>
+<p class="fade-paragraph" style="animation-delay:2.1s;">Se você está pensando em desmamar, <strong>esse é o começo do seu processo</strong>. Meu E-book vai te mostrar <strong>como saber se você e seu bebê estão prontos</strong>, sem culpa, com amor e segurança.</p>
+<p class="fade-paragraph" style="animation-delay:2.3s;">💌 <strong>Você não está sozinha!</strong></p>
+<a href="https://pay.hotmart.com/E102479844P" target="_blank" class="btn fade-paragraph" style="animation-delay:2.5s;">Quero meu E-book</a>
+</div>
+</div>
 </section>
 
 <section>
 <h2>Eu sei exatamente o que você está sentindo…</h2>
-<p>
-O cansaço que parece não ter fim. As noites em claro. A sensação de que o seu corpo já não te pertence.
-</p>
-<p>
-Você ama seu filho profundamente, mas sente vontade de retomar sua autonomia — e a culpa aparece.
-</p>
-<p>
-Entre julgamentos e pressões externas, como ouvir a sua própria voz?
-</p>
+<p>O cansaço que parece não ter fim. As noites em claro. A sensação de que o seu corpo já não te pertence.</p>
+<p>Você ama seu filho profundamente, mas sente vontade de retomar sua autonomia — e a culpa aparece.</p>
+<p>Entre julgamentos e pressões externas, como ouvir a sua própria voz?</p>
 
-<blockquote class="testimonial">
-“O desmame não precisa ser um corte bruto. Existe um caminho de transição.”
-</blockquote>
-</section>
-
-<section>
-<h2>Além do Leite – O Guia do Desmame Consciente</h2>
-<p><strong>DIGITAL (EBOOK)</strong></p>
-<ul>
-<li>🌸 Identifique os sinais de prontidão da mãe e do bebê</li>
-<li>🌙 Estratégias respeitosas para o desmame noturno</li>
-<li>💞 Como lidar com birras e frustrações</li>
-<li>🧠 Técnicas para ansiedade e sentimento de perda</li>
-</ul>
+<div class="testimonials-container">
+<div class="testimonial-slide active">“O desmame não precisa ser um corte bruto. Existe um caminho de transição.” — Mariana S., mãe do Leo (2 anos)</div>
+<div class="testimonial-slide">“Foi um processo de 3 semanas lindo e sem choros desesperados.” — Carla F., mãe da Bia (18 meses)</div>
+<div class="testimonial-slide">“O capítulo sobre desmame noturno foi um divisor de águas.” — Juliana M., mãe do Théo (2 anos e meio)</div>
+</div>
 </section>
 
 <section class="price-box">
@@ -243,19 +205,14 @@ Entre julgamentos e pressões externas, como ouvir a sua própria voz?
 <p class="old-price">De R$ 147,00</p>
 <h1>R$ 37,00</h1>
 <p>ou em até 7x de R$ 5,87</p>
-
-<p>
-✅ Ebook completo em PDF<br>
-✅ Planner de Transição Alimentar<br>
-✅ Garantia incondicional de 7 dias
-</p>
-
-<a href="https://pay.hotmart.com/E102479844P" 
-   target="_blank" 
-   class="btn">
-Quero garantir meu desconto
-</a>
-
+<div class="countdown">
+<span id="days">00</span> :
+<span id="hours">00</span> :
+<span id="minutes">00</span> :
+<span id="seconds">00</span>
+</div>
+<p>✅ Ebook completo em PDF<br>✅ Planner de Transição Alimentar<br>✅ Garantia incondicional de 7 dias</p>
+<a href="https://pay.hotmart.com/E102479844P" target="_blank" class="btn">Quero garantir meu desconto</a>
 <p><small>Visa • Mastercard • Pix</small></p>
 </section>
 
@@ -270,6 +227,40 @@ Quero garantir meu desconto
 <p>©️ 2024 Além do Leite. Todos os direitos reservados.</p>
 <p>Aviso: Este conteúdo não substitui a consulta com profissionais de saúde.</p>
 </footer>
+
+<!-- ====== Fixed CTA mobile ====== -->
+<div class="fixed-cta"><a href="https://pay.hotmart.com/E102479844P">Quero meu E-book Agora!</a></div>
+
+<script>
+// ====== Contador regressivo ======
+const countdownDate = new Date();
+countdownDate.setHours(countdownDate.getHours()+24); // 24h para teste
+
+function updateCountdown(){
+    const now = new Date().getTime();
+    const distance = countdownDate - now;
+    if(distance<0) return;
+    const days = Math.floor(distance/(1000*60*60*24));
+    const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+    const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+    const seconds = Math.floor((distance%(1000*60))/1000);
+    document.getElementById('days').textContent = days.toString().padStart(2,'0');
+    document.getElementById('hours').textContent = hours.toString().padStart(2,'0');
+    document.getElementById('minutes').textContent = minutes.toString().padStart(2,'0');
+    document.getElementById('seconds').textContent = seconds.toString().padStart(2,'0');
+}
+setInterval(updateCountdown,1000);
+updateCountdown();
+
+// ====== Testimonials rotativos ======
+const slides = document.querySelectorAll('.testimonial-slide');
+let current = 0;
+setInterval(()=>{
+    slides[current].classList.remove('active');
+    current = (current+1)%slides.length;
+    slides[current].classList.add('active');
+},5000);
+</script>
 
 </body>
 </html>
