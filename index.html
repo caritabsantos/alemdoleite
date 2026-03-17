@@ -7,7 +7,7 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -28,7 +28,6 @@ body{
   font-family:'Montserrat',sans-serif;
   background:#fffaf8;
   color:#5a3a2e;
-  scroll-behavior:smooth;
 }
 
 section{
@@ -37,26 +36,17 @@ section{
   margin:auto;
 }
 
-h1,h2,h3{
+h1,h2{
   font-family:'Playfair Display',serif;
-  margin-bottom:20px;
-}
-
-h1{
-  font-size:42px;
-  text-align:center;
-  line-height:1.4;
-}
-
-h2{
-  font-size:30px;
   text-align:center;
 }
+
+h1{font-size:42px;}
+h2{font-size:30px;}
 
 p{
   font-size:20px;
-  line-height:1.9;
-  margin-bottom:20px;
+  line-height:1.8;
 }
 
 .hero{
@@ -89,6 +79,7 @@ p{
   font-weight:600;
   text-decoration:none;
   box-shadow:0 10px 30px rgba(255,80,60,0.4);
+  margin-top:20px;
 }
 
 .story-section{
@@ -118,6 +109,48 @@ p{
   font-size:20px;
 }
 
+/* ===== DEPOIMENTOS WHATSAPP ===== */
+.testimonials{
+  text-align:center;
+  margin-top:60px;
+}
+
+.testimonial-container{
+  position:relative;
+  height:180px;
+  overflow:hidden;
+  margin-top:30px;
+}
+
+.testimonial{
+  position:absolute;
+  width:100%;
+  opacity:0;
+  transition:opacity .8s ease;
+}
+
+.testimonial.active{
+  opacity:1;
+}
+
+.chat{
+  background:#e5ddd5;
+  padding:20px;
+  border-radius:20px;
+  max-width:400px;
+  margin:auto;
+  text-align:left;
+}
+
+.chat p{
+  background:#dcf8c6;
+  padding:10px 14px;
+  border-radius:12px;
+  margin-bottom:10px;
+  display:inline-block;
+}
+
+/* ===== OFERTA ===== */
 .price-section{
   background:linear-gradient(180deg,#ffe8e4,#fffaf8);
   text-align:center;
@@ -135,14 +168,12 @@ p{
 
 <body>
 
-<!-- HERO (ALINHADO COM ANÚNCIO) -->
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>Se você sente que precisa parar de amamentar…<br>mas só de pensar nisso já dói…</h1>
 
-    <p>
-      Eu também tive medo de perder o vínculo com meu filho.
-    </p>
+    <p>Eu também tive medo de perder o vínculo com meu filho.</p>
 
     <a href="https://pay.hotmart.com/E102479844P" class="btn" onclick="fbq('track','InitiateCheckout');">
       Quero fazer isso com amor e sem culpa
@@ -150,7 +181,7 @@ p{
   </div>
 </section>
 
-<!-- HISTÓRIA CONECTADA -->
+<!-- HISTÓRIA -->
 <section class="story-section">
   <div class="story-container">
 
@@ -168,14 +199,12 @@ p{
       Foi lindo… mas também foi muito intenso.
     </p>
 
-    <p>
-      E talvez você esteja exatamente aí agora.
-    </p>
+    <p>E talvez você esteja exatamente aí agora.</p>
 
   </div>
 </section>
 
-<!-- QUEBRA DE CRENÇA -->
+<!-- QUEBRA -->
 <section class="story-section">
   <div class="story-container">
 
@@ -185,9 +214,7 @@ p{
       O problema é não saber como fazer isso sem culpa… sem trauma… sem dor.
     </p>
 
-    <p>
-      E foi exatamente isso que eu descobri.
-    </p>
+    <p>E foi exatamente isso que eu descobri.</p>
 
   </div>
 </section>
@@ -203,6 +230,39 @@ p{
   </ul>
 </section>
 
+<!-- DEPOIMENTOS -->
+<section class="testimonials">
+  <h2>O que outras mães me disseram depois</h2>
+
+  <div class="testimonial-container">
+
+    <div class="testimonial active">
+      <div class="chat">
+        <p>Amiga… eu achei que ia ser impossível 😭</p>
+        <p>Mas fiz do jeitinho que você explicou…</p>
+        <p>E ele dormiu sem mamar hoje 🥺💛</p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="chat">
+        <p>Eu tava me sentindo MUITO culpada…</p>
+        <p>Mas entendi que não tava abandonando ele.</p>
+        <p>Foi leve… obrigada de verdade 🙏</p>
+      </div>
+    </div>
+
+    <div class="testimonial">
+      <div class="chat">
+        <p>Eu não dormia há meses 😩</p>
+        <p>Hoje consegui descansar… nem acredito</p>
+        <p>Você salvou minha rotina 💛</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- OFERTA -->
 <section class="price-section">
   <h2>Um guia para te ajudar nesse momento difícil</h2>
@@ -213,6 +273,18 @@ p{
     Quero fazer um desmame leve e sem culpa
   </a>
 </section>
+
+<!-- SCRIPT -->
+<script>
+const testimonials = document.querySelectorAll('.testimonial');
+let index = 0;
+
+setInterval(()=>{
+  testimonials[index].classList.remove('active');
+  index = (index+1) % testimonials.length;
+  testimonials[index].classList.add('active');
+},4000);
+</script>
 
 </body>
 </html>
